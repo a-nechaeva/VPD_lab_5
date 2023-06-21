@@ -191,6 +191,32 @@ v_1 = \sqrt{\left( \frac{d \left( x + l \sin \Theta  \right)}{dt} \right)^2 + \l
 = \sqrt{\left( \dot{x} + \dot{\Theta} l \cos \Theta \right)^2 + \left( -  \dot{\Theta} l \sin \Theta \right)^2} = 
  \sqrt{\dot{x}^2 +2 \dot{x} \dot{\Theta} l \cos \Theta +  \dot{\Theta}^2 l^2}
 \end{multline}
+В итоге получаем выражение для полной кинетической энергии системы:
+\begin{equation}
+E_{sum} = E_{pen} + E_{cart} = \frac{m_1 (\dot{x}^2 +2 \dot{x} \dot{\Theta} l \cos \Theta +  \dot{\Theta}^2 l^2)}{2} +  \frac{(m_2 + m_1) \dot{x}^2}{2} 
+\end{equation}
+Далее выразим силу, действующую на систему:
+\begin{equation}
+F = (m_1 + m_2) \ddot{x} + m_1 l \ddot{\Theta} \cos \Theta - m_1 l \dot{\Theta} ^2 \sin \Theta
+\end{equation}
+И получим систему: \textbf{WHY???}
+\begin{equation}
+\begin{cases}
+F = (m_1 + m_2) \ddot{x} + m_1 l \ddot{\Theta} \cos \Theta - m_1 l \dot{\Theta} ^2 \sin \Theta \, , \\
+l \ddot{\Theta} + g \sin \Theta = \ddot{x} \cos \Theta
+\end{cases}
+\end{equation} 
+Проведем математические преобразования:
+\begin{equation}
+l \ddot{\Theta} + g \sin \Theta = \ddot{x} \cos \Theta \to  \ddot{x} = \frac{l \ddot{\Theta} + g \sin \Theta }{ \cos \Theta}
+\end{equation}
+\begin{equation}
+F = (m_1 + m_2) \frac{l \ddot{\Theta} + g \sin \Theta }{ \cos \Theta} + m_1 l \ddot{\Theta} \cos \Theta - m_1 l \dot{\Theta} ^2 \sin \Theta \,
+\end{equation}
+Выразим угловое ускорение:
+\begin{equation}
+\ddot{\Theta} = \frac{\left( F - \frac{(m_1 + m_2) g \sin \Theta}{\cos \Theta} + m_1 l \dot{\Theta}^2 \sin \Theta \right) \cos \Theta}{l \left( m_1 + m_2 + m_1 \cos^2 \Theta \right)}
+\end{equation}
 
 \newpage
 \section{Практическая часть}	
