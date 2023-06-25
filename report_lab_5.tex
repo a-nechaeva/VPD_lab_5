@@ -20,7 +20,7 @@
 \pagestyle{fancy}
 \fancypagestyle{style}{ % создание нового стиля style
 	\fancyhf{} % очистка колонтитулов
-	\fancyhead[LO, RE]{<КРАТКОЕ НАЗВАНИЕ>} % название документа наверху
+	\fancyhead[LO, RE]{} % название документа наверху
 	\fancyhead[RO, LE]{\leftmark} % название section наверху
 	\fancyfoot[RO, LE]{\thepage} % номер страницы справа внизу на нечетных и слева внизу на четных
 	\renewcommand{\headrulewidth}{0.25pt} % толщина линии сверху
@@ -146,6 +146,8 @@
 
 
 \newpage
+\section{Цель работы}
+Стабилизация перевернутого маятника с помощью выведенного закона управления.
 \section{Теоретическая часть}	
 В данной работе все построения выполняются для простой модели перевернутого маятника на тележке, движение которого осуществляется в плоскости.
 
@@ -199,7 +201,7 @@ E_{sum} = E_{pen} + E_{cart} = \frac{m_1 (\dot{x}^2 +2 \dot{x} \dot{\Theta} l \c
 \begin{equation}
 F = (m_1 + m_2) \ddot{x} + m_1 l \ddot{\Theta} \cos \Theta - m_1 l \dot{\Theta} ^2 \sin \Theta
 \end{equation}
-И получим систему: \textbf{WHY???}
+И, воспользовавшись уравнениями Лагранжа, получим систему:
 \begin{equation}
 \begin{cases}
 F = (m_1 + m_2) \ddot{x} + m_1 l \ddot{\Theta} \cos \Theta - m_1 l \dot{\Theta} ^2 \sin \Theta \, , \\
@@ -220,6 +222,14 @@ F = (m_1 + m_2) \frac{l \ddot{\Theta} + g \sin \Theta }{ \cos \Theta} + m_1 l \d
 
 \newpage
 \section{Практическая часть}	
+\subsection{Управляющий закон}
+
+\subsection{Построение схемы в Simulink}
+
+\subsection{Результаты}
+
+\subsection{Вывод}
+В процессе выполнения лабораторной работы была выведена математическая модель перевернутого маятника на основе уравнений механики, синтезирован закон управления и проведен подбор параметров для стабилизации маятника.
 
 
 \end{document}
