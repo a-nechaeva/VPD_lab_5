@@ -223,13 +223,62 @@ F = (m_1 + m_2) \frac{l \ddot{\Theta} + g \sin \Theta }{ \cos \Theta} + m_1 l \d
 \newpage
 \section{Практическая часть}	
 \subsection{Управляющий закон}
-
+Для стабилизации маятника использовался ПИД-регулятор.
 \subsection{Построение схемы в Simulink}
-
+\begin{figure}[h]
+		\center{\includegraphics[width=1\linewidth]{"./graphics/sim.png"}}
+                    %  \includegraphics{"./Q-table.jpg"}
+	           \caption{Схема}
+\end{figure}
+Для моделирования процесса стабилизации маятника использовалась схема, приведенная на рисунке 1.
 \subsection{Результаты}
+В результате были получены графики (рисунки 2 - 9) зависимости угла отклонения маятника от вертикали ($\Theta (t)$) и координаты центра тележки ($x(t)$) для различных наборов коэффициентов ПИД-регулятора.
 
 \subsection{Вывод}
-В процессе выполнения лабораторной работы была выведена математическая модель перевернутого маятника на основе уравнений механики, синтезирован закон управления и проведен подбор параметров для стабилизации маятника.
+В процессе выполнения лабораторной работы была выведена математическая модель перевернутого маятника на основе уравнений механики, синтезирован закон управления и проведен подбор параметров для стабилизации маятника. Наиболее оптимальными коэффициентами для стабилизации маятника в данной работе были выбраны  $p = 20, \, i = 10, \, d = 0$ (Рисунок 6), где $p$ -- коэффиент пропорциональности, $i$ -- коэффициент перед интегральной составляющей, $d$ -- перед дифференциальной составляющей. Об успешной стабилизации говорит отсутствие видимой на графике установившейся ошибки, относительно небольшое перерегулирование и короткое время стабилизации процесса.
+
+\begin{figure}[!h]
+		{\includegraphics[width=1\linewidth]{"./graphics/tet_20_10_10.jpg"}}
+                    %  \includegraphics{"./Q-table.jpg"}
+	           \caption{$\Theta (t)$ при $p = 20, \, i = 10, \, d = 10$}
+\end{figure}
+\begin{figure}[!h]
+		{\includegraphics[width=1\linewidth]{"./graphics/x_20_10_10.jpg"}}
+                    %  \includegraphics{"./Q-table.jpg"}
+	           \caption{$x(t)$  при $p = 20, \, i = 10, \, d = 10$}
+\end{figure}
+\begin{figure}[!h]
+		{\includegraphics[width=1\linewidth]{"./graphics/tet_20_0_0.jpg"}}
+                    %  \includegraphics{"./Q-table.jpg"}
+	           \caption{$\Theta (t)$ при $p = 20, \, i = 0, \, d = 0$}
+\end{figure}
+\begin{figure}[!h]
+		{\includegraphics[width=1\linewidth]{"./graphics/x_20_0_0.jpg"}}
+                    %  \includegraphics{"./Q-table.jpg"}
+	           \caption{$x(t)$  при $p = 20, \, i = 0, \, d = 0$}
+\end{figure}
+\begin{figure}[!h]
+		{\includegraphics[width=1\linewidth]{"./graphics/x_20_10_0.jpg"}}
+                    %  \includegraphics{"./Q-table.jpg"}
+	           \caption{$\Theta (t)$ при $p = 20, \, i = 10, \, d = 0$}
+\end{figure}
+\begin{figure}[!h]
+		{\includegraphics[width=1\linewidth]{"./graphics/tet_20_10_0.jpg"}}
+                    %  \includegraphics{"./Q-table.jpg"}
+	           \caption{$x(t)$  при $p = 20, \, i = 10, \, d = 0$}
+\end{figure}
+\begin{figure}[!h]
+		{\includegraphics[width=1\linewidth]{"./graphics/tet_20_10_20.jpg"}}
+                    %  \includegraphics{"./Q-table.jpg"}
+	           \caption{$\Theta (t)$ при $p = 20, \, i = 10, \, d = 20$}
+\end{figure}
+\begin{figure}[!h]
+		{\includegraphics[width=1\linewidth]{"./graphics/x_20_10_20.jpg"}}
+                    %  \includegraphics{"./Q-table.jpg"}
+	           \caption{$x(t)$  при $p = 20, \, i = 10, \, d = 20$}
+\end{figure}
+
+
 
 
 \end{document}
